@@ -1,6 +1,6 @@
-const momgoose = require('mongoose'); //เรียกใช้งาน mongoose
+const mongoose = require('mongoose');
 
-const productSchema = momgoose.Schema({
+const productSchema = mongoose.Schema({
     name:String,
     detail:{
         type:String,
@@ -10,4 +10,4 @@ const productSchema = momgoose.Schema({
     },
 },{ timestamps: true });
 
-module.exports = momgoose.model('product',productSchema); //ส่งออกไปให้คนอื่นใช้งาน
+module.exports = mongoose.model('product',productSchema);

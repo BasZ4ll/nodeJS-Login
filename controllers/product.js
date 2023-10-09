@@ -1,12 +1,12 @@
 const Product = require('../models/product')
 
 exports.read = async(req, res)=>{
-    res.send('Hello Controller')
+    res.send(req.body)
 }
 
 exports.list = async(req, res)=>{
     try{
-        res.send('Hello list')
+        res.send(req.body)
     }catch (err) {
         console.log(err)
         res.status(500).send('Error จ้า')
