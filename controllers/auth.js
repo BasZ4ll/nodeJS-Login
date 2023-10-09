@@ -55,7 +55,7 @@ exports.login = async(req, res)=> {
                 }
             }
             //Gen
-            jwt.sign(payload,'jwtsecret', { expiresIn:10},(err,token)=>{
+            jwt.sign(payload,'jwtsecret', { expiresIn:30},(err,token)=>{
                 if(err) throw err;
                 res.json({ token, payload })
             })
@@ -63,7 +63,7 @@ exports.login = async(req, res)=> {
         }else {
             return res.status(400).send('User not found!!')
         }
-        
+
     }catch (err) {
         console.log(err)
         res.status(500).send('Error จ้า')

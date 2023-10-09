@@ -6,7 +6,8 @@ exports.read = async(req, res)=>{
 
 exports.list = async(req, res)=>{
     try{
-        res.send(req.body)
+        const product = await Product.find({})
+        res.send(product)
     }catch (err) {
         console.log(err)
         res.status(500).send('Error จ้า')
