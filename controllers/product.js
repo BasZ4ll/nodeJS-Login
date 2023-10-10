@@ -32,8 +32,7 @@ exports.create = async (req, res) => {
 exports.update = async (req, res) => {
     try {
         const id = req.params.id
-        const updated = await Product
-            .findOneAndUpdate({ _id: id }, req.body, { new: true })
+        const updated = await Product.findOneAndUpdate({ _id: id }, req.body, { new: true })
         res.send(updated)
     } catch (err) {
         console.log(err)
