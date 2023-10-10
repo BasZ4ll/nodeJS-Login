@@ -22,13 +22,6 @@ exports.register = async(req, res)=> {
         await user.save()
         res.send('Save')
 
-        
-
-
-
-
-
-
         res.send(req.body)
         
     }catch (err) {
@@ -51,11 +44,11 @@ exports.login = async(req, res)=> {
             //Payload
             var payload = {
                 user:{
-                    name:user.name
+                    name: user.name
                 }
             }
-            //Gen
-            jwt.sign(payload,'jwtsecret', { expiresIn:30},(err,token)=>{
+            //Gen Token 
+            jwt.sign(payload,'jwtsecret', { expiresIn: 86400},(err,token)=>{
                 if(err) throw err;
                 res.json({ token, payload })
             })
