@@ -11,7 +11,7 @@ exports.list = async (req, res) => {
         res.send(product)
     } catch (err) {
         console.log(err)
-        res.status(500).send('Error จ้า')
+        res.status(500).send('---- Server Error ----')
     }
 }
 
@@ -25,7 +25,7 @@ exports.create = async (req, res) => {
         res.send(producted)
     } catch (err) {
         console.log(err)
-        res.status(500).send('Error จ้า')
+        res.status(500).send('---- Server Error ----')
     }
 }
 
@@ -36,7 +36,7 @@ exports.update = async (req, res) => {
         res.send(updated)
     } catch (err) {
         console.log(err)
-        res.status(500).send('Error จ้า')
+        res.status(500).send('---- Server Error ---')
     }
 }
 exports.deleted = async (req, res) => {
@@ -57,6 +57,6 @@ exports.deleted = async (req, res) => {
         res.send(removed)
     } catch (err) {
         console.log(err)
-        res.status(500).send('Error จ้า')
+        res.status(500).send('---- Server Error ---')
     }
 }

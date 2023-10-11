@@ -8,7 +8,7 @@ This is a simple login system using NodeJS, Express, and MongoDB. It uses Passpo
 
 1. Clone the repo
    ```sh
-   git clone 
+   git clone https://github.com/BasZ4ll/nodeJS-Login.git
     ```
 2. Install NPM packages
     ```sh
